@@ -83,8 +83,15 @@
   .media{display:grid;grid-template-columns:1fr;gap:16px}
   .media h3{margin:0 0 8px;font-size:14px;color:var(--ink-2);display:flex;align-items:center;gap:6px}
   audio{width:100%}
-  .rate{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-  .rate button{border:1px solid var(--rule);background:var(--soft);color:var(--ink-2);border-radius:99px;padding:3px 12px;font-size:12.5px}
+  .player{background:var(--soft);border:1px solid var(--rule);border-radius:14px;padding:10px 12px}
+  .pl-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .pl-play{width:44px;height:44px;border-radius:50%;border:0;background:var(--navy);color:var(--paper);font-size:17px;display:grid;place-items:center;flex:none}
+  .pl-skip{border:1px solid var(--rule);background:var(--paper);color:var(--ink-2);border-radius:99px;padding:6px 12px;font-size:13px;font-weight:700;flex:none}
+  .pl-skip:hover{color:var(--ink);border-color:var(--ink-3)}
+  .pl-time{margin-left:auto;font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+  .pl-seek{width:100%;margin:10px 0 2px;accent-color:var(--navy)}
+  .rate{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+  .rate button{border:1px solid var(--rule);background:var(--soft);color:var(--ink-2);border-radius:99px;padding:3px 9px;font-size:12.5px}
   .rate button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--paper)}
   .video{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}
   .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -303,7 +310,7 @@ const LESSONS = [
  "imgAlt": "左：段差の上に立つ年長者（「先輩」）に頭を下げる人たち（rank）。右：丸いテーブルの上で同じ高さに並ぶ人たち（「Just call me Bob!」・equal）。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-1.mp3?v=20261022",
+ "audio": "audio/1-1.mp3?v=20261023",
  "yt": "",
  "vaAlt": "年齢とコミュニケーション：日本と英語圏の文化比較。日本は敬称や上司への丁寧な言葉遣い、英語圏はファーストネームでの呼びかけとアイコンタクト・傾聴による敬意を紹介。",
  "gvaAlt": "英語の文法の基本：文の要素とbe動詞。主語と述語、名詞・代名詞、形容詞・冠詞、副詞の働きと、主語によるbe動詞（am / are / is）の使い分けの表。",
@@ -682,7 +689,7 @@ const LESSONS = [
  "imgAlt": "左：海に浮かぶ帆船と、India→Britain→Japan と弧を描く点線の矢印。右：湯気の立つ皿に盛られた日本のカレーライスとスプーン。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-2.mp3?v=20261022",
+ "audio": "audio/1-2.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "指示代名詞（this / that / these / those）、人称代名詞の所有格＋名詞、名詞を直接修飾する形容詞、指示代名詞＋名詞を、イラスト付きの例文で整理した図。",
@@ -1074,7 +1081,7 @@ const LESSONS = [
  "imgAlt": "テーブルの両端に座る二人。左の人は手を伸ばして話し（吹き出しに文字の線）、右の人は黙って考えている（吹き出しに「…」）。二人の間に橋のような弧がかかっている。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-3.mp3?v=20261022",
+ "audio": "audio/1-3.mp3?v=20261023",
  "yt": "",
  "vaAlt": "意見表明の文化差：沈黙と自信。西洋は意見をすぐ言うことが自信の証、日本は和を重んじ沈黙は思考の時間。会議室での欧米人上司と日本人社員のすれ違いを描いた図。",
  "gvaAlt": "一般動詞の働き（do と have）、自動詞と他動詞、命令形（基本・主語のある命令形・否定の命令形）を、イラスト付きの例文で整理した図。",
@@ -1442,7 +1449,7 @@ const LESSONS = [
  "imgAlt": "左：本がぎっしり並んだ本棚（心は大きな図書館）。右：ソファに横になってリラックスする患者と、子供の頃の自分・時計・クマのぬいぐるみの思い出の吹き出し。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-4.mp3?v=20261022",
+ "audio": "audio/1-4.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "英語の名詞マスターガイド：可算名詞と不可算名詞、一般的な話と具体的な話、複数形の作り方、some/any・many/much・every/all、a cup of・a pair of などの特別な数え方。",
@@ -1816,7 +1823,7 @@ const LESSONS = [
  "imgAlt": "机の上に積まれた書類（OKの印）、ランプの下の「E = mc²」と書かれた紙、窓の外にはベルンの時計塔。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-5.mp3?v=20261022",
+ "audio": "audio/1-5.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "疑問詞・代名詞と名詞・場所と冠詞theの使い分け・前置詞＋名詞の4つをイラストと例文でまとめた図解。",
@@ -2203,7 +2210,7 @@ const LESSONS = [
  "imgAlt": "海に浮かぶ小さな島にヤシの木と高床の家。上昇する海面を示す矢印と、照りつける太陽・温度計。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-6.mp3?v=20261022",
+ "audio": "audio/1-6.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "疑問詞（what・which・whose）、基本の前置詞（of・for・on・in）、基本的な接続詞（and・or）をイラストと例文でまとめた図解。",
@@ -2561,7 +2568,7 @@ const LESSONS = [
  "imgAlt": "地球の周りを回る月の図。月はどの位置でも同じ面を地球に向けている（tidal locking＝潮汐固定）。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-7.mp3?v=20261022",
+ "audio": "audio/1-7.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "「英語の基本文法ガイド」：疑問詞を使った疑問文（where・when・why・how）、基本の前置詞（to・from・at・by）、集合名詞の使い方をイラストで整理した図。",
@@ -2940,7 +2947,7 @@ const LESSONS = [
  "imgAlt": "ぶつかり合って強い光を放つ2つの中性子星と、宝石付きの金の指輪（Au・Pt＝金・プラチナ）。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-8.mp3?v=20261022",
+ "audio": "audio/1-8.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "「英語の基本文法ガイド」：基本の前置詞（with・about・after・over と at・on・in の使い分け）、所有代名詞、間投詞、間違いやすい名詞をイラストで整理した図。",
@@ -3325,7 +3332,7 @@ const LESSONS = [
  "imgAlt": "寒い夜、外に置かれた木の棒入りのコップのジュースが、棒付きのアイスキャンディーに変わる様子（1905年）。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-9.mp3?v=20261022",
+ "audio": "audio/1-9.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "「英語の動詞と形容詞：使い分けマスターガイド」：状態動詞と動作動詞、進行形の作り方と用法、the＋形容詞、little と small のニュアンスの違いをイラストで整理した図。",
@@ -3692,7 +3699,7 @@ const LESSONS = [
  "imgAlt": "太陽の光を受けるアレクサンドリアの塔（影の角度7.2°）とシエネの井戸。2都市の間は5,000スタディア。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-10.mp3?v=20261022",
+ "audio": "audio/1-10.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "be動詞の過去形、itの3つの用法、名詞の同格、副詞（too など）の注意点を例文とイラストでまとめた図解。",
@@ -4027,7 +4034,7 @@ const LESSONS = [
  "imgAlt": "和室で両手を上げて「Wow!」と喜ぶ人と、静かに「わあ…」とつぶやく人。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/1-11.mp3?v=20261022",
+ "audio": "audio/1-11.mp3?v=20261023",
  "yt": "",
  "vaAlt": "Wow!、Oops!、Ouch!、Hey! など英語の感嘆詞の使い方を、場面別のイラストで紹介した図解。",
  "gvaAlt": "一般動詞の過去形、助動詞 can / could の用法、名詞の所有格と二重所有格（a friend of mine）をまとめた図解。",
@@ -4375,7 +4382,7 @@ const LESSONS = [
  "imgAlt": "ソファでノートパソコンを使う学生と、大学の建物と再生ボタンが映る大きな画面（learn from anywhere）。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/2-1.mp3?v=20261022",
+ "audio": "audio/2-1.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "助動詞 may / might、will / would、場面で使い分ける未来表現、再帰代名詞（-self / -selves）をイラスト付きでまとめた図解。",
@@ -4731,7 +4738,7 @@ const LESSONS = [
  "imgAlt": "左：「OFF」と表示されたスマートフォンが鍵のかかった箱にしまわれている。右：太陽の下、木のそばで両手を上げて笑う3人。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/2-2.mp3?v=20261022",
+ "audio": "audio/2-2.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "文法インフォグラフィック：否定疑問文・付加疑問文・選択疑問文、shall／should／must／have to の意味、must と have to のニュアンスの違い（mustn't と don't have to）、第4文型 S+V+O（人）+O（モノ）と to／for／of への書き換え。",
@@ -5097,7 +5104,7 @@ const LESSONS = [
  "imgAlt": "なだらかな丘の上に並ぶ太陽光パネルと、空に向かって立つ3基の風力発電機。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/2-3.mp3?v=20261022",
+ "audio": "audio/2-3.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "文法インフォグラフィック：to不定詞の3つの用法、can と be able to の違い、推量の助動詞の確信度、第2文型の動詞と第5文型（O＝C）、There構文の2つの形、文全体を修飾する副詞。",
@@ -5489,7 +5496,7 @@ const LESSONS = [
  "imgAlt": "「うん、うん」と何度もうなずく人と、それを見て「Hmm…?」と戸惑う人。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/2-4.mp3?v=20261022",
+ "audio": "audio/2-4.mp3?v=20261023",
  "yt": "",
  "vaAlt": "異文化コミュニケーションのインフォグラフィック：日本と英語圏のしぐさの違い（うなずきと相づち、「まあまあ」の表現、手招きの向き、お辞儀と握手・アイコンタクト）。",
  "gvaAlt": "文法インフォグラフィック：動名詞の働き（主語・補語・目的語、所有格＋動名詞）、remember to do と remember doing の違い、意味がほぼ同じ like／love／start など、等位接続詞 and／or／but の使い方。",
@@ -5863,7 +5870,7 @@ const LESSONS = [
  "imgAlt": "オフィスで、「両手で名刺を」と頭を下げて両手で名刺を差し出す日本人と、「Nice to meet you!」と片手で名刺を差し出すスミス氏。後ろにグラフのボードと「Mr. Smith」の名札が置かれた机。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/2-5.mp3?v=20261022",
+ "audio": "audio/2-5.mp3?v=20261023",
  "yt": "",
  "vaAlt": "日米ビジネス文化の比較。ノック（日本は控えめに2回、アメリカは3〜4回）、名刺交換（両手と片手）、力強い握手と自然な笑顔、話の順序（背景から／結論から）の4つの場面。",
  "gvaAlt": "受動態（基本・2つの目的語を持つ文の2通りの受動態・getを使った受動・自動詞なのに受動の意味）と分詞（名詞を飾る-ing/-ed・感情の原因-ingと感じる人-ed・状態を表す過去分詞）の図解。",
@@ -6258,7 +6265,7 @@ const LESSONS = [
  "imgAlt": "中央に地球。その周りに提灯・鳥居・湯気の立つマグカップ・旗など、世界各地の文化を表すアイコンが点線でつながっている。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/2-6.mp3?v=20261022",
+ "audio": "audio/2-6.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "名詞節を導く接続詞（that節・間接疑問文）、長い主語を後ろに回す形式主語it、比較表現（原級 as〜as・比較級・最上級）の図解。",
@@ -6624,7 +6631,7 @@ const LESSONS = [
  "imgAlt": "夜11時（23:00）、月が見える窓のそばで机に向かい一人でノートパソコンを使う人。頭の上の吹き出しにチームの3人と「my team…?」の文字。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/2-7.mp3?v=20261022",
+ "audio": "audio/2-7.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "時（when・before・after・while）、理由（because）、条件（if）、譲歩（although・even if・even though）、目的（so that）を表す接続詞と、前置詞が不要な時・場所の表現の図解。",
@@ -6997,7 +7004,7 @@ const LESSONS = [
  "imgAlt": "砂漠を進むラクダの隊商と商人。左上に「EAST」と絹の反物、右上に「WEST」と太陽、東西を結ぶ点線の道。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/3-1.mp3?v=20261022",
+ "audio": "audio/3-1.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "現在完了形の3用法（完了・結果／継続／経験）、have gone to と be finished の注意点、関係代名詞 who・which・that とカンマの有無（限定用法・非制限用法）をまとめた図解。",
@@ -7349,7 +7356,7 @@ const LESSONS = [
  "imgAlt": "テレビと新聞から、ハートやコメントが表示されたスマートフォンのSNS画面と右肩上がりのグラフへ向かう矢印。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/3-2.mp3?v=20261022",
+ "audio": "audio/3-2.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "時制の比較（現在形と進行形／過去形と現在完了形／過去形と過去進行形）、否定疑問文への答え方・, right?・応答疑問文、疑問詞＋to不定詞の働き（主語・目的語・補語）をまとめた図解。",
@@ -7723,7 +7730,7 @@ const LESSONS = [
  "imgAlt": "息を合わせてボートをこぐ4人（in sync）と、岸の上で手を挙げて「I have an idea!」と言う1人。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/3-3.mp3?v=20261022",
+ "audio": "audio/3-3.mp3?v=20261023",
  "yt": "",
  "vaAlt": "日本の「集団」文化（会社名で自己紹介・机をくっつけた島型の配置）と、英語圏の「個人」文化（職業で自己紹介・パーテーションで区切られた個別のデスク）を比べた図。",
  "gvaAlt": "人々一般を表す we・you・they、指示代名詞 that/those・this/that の特別用法、other と another、so・the same・one、-thing／-body で終わる代名詞＋形容詞をまとめた図解。",
@@ -8094,7 +8101,7 @@ const LESSONS = [
  "imgAlt": "陸上トラックを走る選手に、観客が「Good luck!」「Keep it up!」「Go for it!」「You can do it!」と声をかけている。右にゴール。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/3-4.mp3?v=20261022",
+ "audio": "audio/3-4.mp3?v=20261023",
  "yt": "",
  "vaAlt": "「頑張って」って英語でなんて言う？――①緊張している相手をリラックスさせたい時（Take it easy. / No problem. / Don't worry.）②相手の幸運を祈る時（Good luck!）③相手を励ましたい時（Hang in there. / You can do it. / Keep going.）の3場面。",
  "gvaAlt": "間違いやすい文法ポイント：1. manyとmuch、2. few / littleのニュアンス（a few / a little）、3. someとany、4. veryとmuchの違い、5. 関係詞句（who is / areなどの省略）、6. to不定詞の意味上の主語（forとof）。",
@@ -8484,7 +8491,7 @@ const LESSONS = [
  "imgAlt": "「Order delayed 3 weeks（注文が3週間遅れ）」の知らせ。左の店員が「申し訳ありません…」と謝り、右の客が「Why smile?」と戸惑っている。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/3-5.mp3?v=20261022",
+ "audio": "audio/3-5.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "英語の重要文法ポイント図解：help / know / come・go + (to) do、使役動詞と知覚動詞（make / have / get / let / see + O + C）の例文。下段は句動詞・前置詞の使い分け（get in / get on、take out / take off、die of / die from、made of / made from）。",
@@ -8861,7 +8868,7 @@ const LESSONS = [
  "imgAlt": "ドアを押さえて開けてくれた人に、通る人が「すみません！」と言う（sorry? thanks?）。押さえている人の側には「Thank you!」の吹き出し。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/3-6.mp3?v=20261022",
+ "audio": "audio/3-6.mp3?v=20261023",
  "yt": "",
  "vaAlt": "「ありがとう」の伝え方：日本 vs. 英語圏の文化比較――言葉の選択（日本は「すみません」、英語圏は \"Thank you.\"）、視線の使い方（日本では過度なアイコンタクトは失礼、英語圏では誠実さの証）、ロンドンで贈り物をもらった時のボディランゲージ（深いお辞儀は誤解されることも／笑顔で \"Thank you so much.\"）。",
  "gvaAlt": "英語の重要文法マスターガイド：関係副詞（where / when / why / how）、関係形容詞（所有を表す whose、前の内容を指す which）、条件文の直説法と仮定法過去（If I were you...）。",
@@ -9234,7 +9241,7 @@ const LESSONS = [
  "imgAlt": "午後6時の職場。「お疲れさまです」と頭を下げる日本人と、両手を上げて「I'm not tired!」と答える英語話者。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-0.mp3?v=20261022",
+ "audio": "audio/4-0.mp3?v=20261023",
  "yt": "",
  "vaAlt": "英語での円滑なコミュニケーション：日本との文化的な違い（1 挨拶の仕方、2 \"How are you?\"への返事、3 名前の呼び方、4 断り方、5 沈黙の扱い方）を会話例付きでまとめた図。",
  "gvaAlt": "文の基本要素（主語と述語、名詞・代名詞・形容詞・副詞・動詞・前置詞）、動詞のさまざまな形（時制・完了形・進行形・受動態・助動詞）、文を豊かにする表現（準動詞・比較・接続詞・疑問詞）をまとめた図。",
@@ -9646,7 +9653,7 @@ const LESSONS = [
  "imgAlt": "左：重機で切り倒された森（cut down）。右：苗木を植え直す人たち（plant again）。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-1.mp3?v=20261022",
+ "audio": "audio/4-1.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "関係副詞 where・when・why・how と関係形容詞 whose の使い方、動詞の4タイプ（活動・完成・達成・状態）、未来完了形・過去完了形・未来進行形を例文付きでまとめた図。",
@@ -9993,7 +10000,7 @@ const LESSONS = [
  "imgAlt": "東京のビル群から東南アジアへ飛ぶ飛行機。東南アジア側には「now」の低い棒と「×3」の高い棒、そしてビジネスバッグ。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-2.mp3?v=20261022",
+ "audio": "audio/4-2.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "条件文（直説法と仮定法）、句動詞（自動詞・他動詞・自動詞＋前置詞）、倍数表現と分数、その他の法助動詞（dare・need・ought to）を例文付きでまとめた図。",
@@ -10331,7 +10338,7 @@ const LESSONS = [
  "imgAlt": "左：レアアースの元素記号（Nd・Dy・Tb・La）と、鉱石が埋まった土の山。右：矢印の先にスマートフォン、電気自動車、風力発電機。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-3.mp3?v=20261022",
+ "audio": "audio/4-3.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "応用英文法ガイド：左に if 以外の条件・仮定表現（unless・suppose/supposing・in case・even if・as if）、右に分詞の用法と分詞構文（時・理由・条件など）を例文つきでまとめた図解。",
@@ -10684,7 +10691,7 @@ const LESSONS = [
  "imgAlt": "いろいろな国の旗のそばに立つ5人が、点線で上の「English」とつながっている。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-4.mp3?v=20261022",
+ "audio": "audio/4-4.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "英文法の重要ポイントまとめ：複合関係詞（whoever・whichever・whatever・wherever・whenever）、不定詞・動名詞の慣用表現（in order to／so as to・enough to／too ～ to・It is no use -ing・feel like -ing）、冠詞の使い分け（so/too + 形容詞 + a + 名詞、the + 楽器・乗り物など、the + 比較級）を図解。",
@@ -11053,7 +11060,7 @@ const LESSONS = [
  "imgAlt": "上昇するグラフの前で、トロフィーを前に「It's nothing special…」とうつむく人と、両手を挙げて「Great work!」とほめる人。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-5.mp3?v=20261022",
+ "audio": "audio/4-5.mp3?v=20261023",
  "yt": "",
  "vaAlt": "謙虚さの表現：日本と英語圏の比較。日本では成功を控えめに表現し、英語圏では賞賛を素直に受け入れる。互いに「自信がない？」「自慢している？」と誤解されやすく、簡潔に受け入れて次に進むのがよいというヒント。",
  "gvaAlt": "英語の命令形と否定表現マスターガイド：命令形 + and、Let を使った提案・許可、no one と none、neither … nor、careless と carefree、否定疑問での誘い、否定を使った同意と慣用句（No wonder! など）を図解。",
@@ -11429,7 +11436,7 @@ const LESSONS = [
  "imgAlt": "照りつける太陽、溶けていく氷山、上がる温度計と海面を示す矢印。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-6.mp3?v=20261022",
+ "audio": "audio/4-6.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "中級英文法の重要ポイントまとめ：不定詞の多様な表現（be to・結果・独立不定詞）、中間態（This new knife cuts meat very smoothly.）、感情の形容詞 -ing と -ed（boring / bored）、前置詞的フレーズ（Due to, According to, instead of）。",
@@ -11810,7 +11817,7 @@ const LESSONS = [
  "imgAlt": "「2050: fewer children…」と書かれた黒板と、空席の目立つ教室。下向き矢印のカレンダー。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-7.mp3?v=20261022",
+ "audio": "audio/4-7.mp3?v=20261023",
  "yt": "",
  "vaAlt": "",
  "gvaAlt": "英語の重要表現まとめ：全否定と部分否定・準否定、否定語を文頭に置く倒置と if の省略、受動態の進行形（The bridge is being renovated now.）、過去分詞の形容詞と複合形容詞（world-famous, full-time）。",
@@ -12193,7 +12200,7 @@ const LESSONS = [
  "gvaAlt": "感情・性質を表す形容詞＋to不定詞／of・in＋-ing、程度を強める・和らげる副詞、文の流れを作る副詞の慣用表現、疑問詞を使った会話表現をまとめた図解。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-8.mp3?v=20261022",
+ "audio": "audio/4-8.mp3?v=20261023",
  "yt": "",
  "passage": [
   [
@@ -12535,7 +12542,7 @@ const LESSONS = [
  "gvaAlt": "部分を表す of の構造、have / get / make / take の基本動詞イディオム、無生物主語の表現、that節内の should の4つのポイントをまとめた図解。",
  "iw": 1260,
  "ih": 552,
- "audio": "audio/4-9.mp3?v=20261022",
+ "audio": "audio/4-9.mp3?v=20261023",
  "yt": "",
  "passage": [
   [
@@ -12969,9 +12976,18 @@ function render(){
   <div class="card media">
     <div>
       <h3>🎧 音声再生</h3>
-      <audio id="aud" controls preload="none" src="${L.audio}"></audio>
+      <audio id="aud" preload="none" src="${L.audio}"></audio>
+      <div class="player">
+        <div class="pl-row">
+          <button class="pl-skip" type="button" data-skip="-5" aria-label="5秒戻る">⏪ 5秒戻る</button>
+          <button class="pl-play" id="plPlay" type="button" aria-label="再生">▶</button>
+          <button class="pl-skip" type="button" data-skip="5" aria-label="5秒進む">5秒進む ⏩</button>
+          <span class="pl-time" id="plTime">0:00 / 0:00</span>
+        </div>
+        <input class="pl-seek" id="plSeek" type="range" min="0" max="1000" value="0" step="1" aria-label="再生位置">
+      </div>
       <div class="rate" role="group" aria-label="再生速度">
-        ${[0.8, 0.9, 1, 1.1].map(r => '<button type="button" data-r="' + r + '" aria-pressed="' + (r === 1) + '">' + r.toFixed(1) + '倍</button>').join("")}
+        ${[0.6, 0.7, 0.8, 0.9, 1, 1.1].map(r => '<button type="button" data-r="' + r + '" aria-pressed="' + (r === 1) + '">' + r.toFixed(1) + '倍</button>').join("")}
       </div>
     </div>
     ${L.yt ? `<div>
@@ -13035,11 +13051,50 @@ function render(){
 ${nextPartHTML()}`;
   $("foot").textContent = "Lesson " + L.id + " — " + L.title;
   document.title = "Lesson " + L.id + "｜" + L.title;
-  renderGQ(); renderRQ(); restore(); if (L.yt) setupVideo(); onScroll();
+  renderGQ(); renderRQ(); restore(); setupAudio(); if (L.yt) setupVideo(); onScroll();
 }
 function nextPartHTML(){
   const i = LESSONS.indexOf(L), n = LESSONS[i + 1];
   return n ? '<div class="nextpart"><button class="btn primary" type="button" data-goto="' + n.id + '">次へ：Lesson ' + n.id + ' ' + esc(n.title) + ' →</button></div>' : "";
+}
+
+/* ===== 音声プレーヤー ===== */
+const SKIP = 5;
+const fmt = t => { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+function skipAudio(d){
+  const a = $("aud"); if (!a) return;
+  const go = () => { a.currentTime = Math.min(Math.max(0, a.currentTime + d), a.duration || 0); };
+  if (a.readyState >= 1) go(); else { a.preload = "metadata"; a.addEventListener("loadedmetadata", go, { once: true }); a.load(); }
+}
+function setupAudio(){
+  const a = $("aud"); if (!a) return;
+  const play = $("plPlay"), seek = $("plSeek"), time = $("plTime");
+  let dragging = false;
+  const upd = () => {
+    time.textContent = fmt(a.currentTime) + " / " + fmt(a.duration);
+    if (!dragging && a.duration) seek.value = Math.round(a.currentTime / a.duration * 1000);
+  };
+  const st = () => { const p = !a.paused; play.textContent = p ? "❚❚" : "▶"; play.setAttribute("aria-label", p ? "一時停止" : "再生"); };
+  ["timeupdate", "loadedmetadata", "durationchange", "seeked"].forEach(ev => a.addEventListener(ev, upd));
+  ["play", "pause", "ended"].forEach(ev => a.addEventListener(ev, st));
+  play.addEventListener("click", () => {
+    if (a.paused) { const r = Number(document.querySelector('.rate button[aria-pressed="true"]').dataset.r); a.playbackRate = r; a.play(); } else a.pause();
+  });
+  seek.addEventListener("input", () => {
+    dragging = true;
+    if (a.duration) { time.textContent = fmt(seek.value / 1000 * a.duration) + " / " + fmt(a.duration); }
+  });
+  seek.addEventListener("change", () => {
+    dragging = false;
+    const go = () => { a.currentTime = seek.value / 1000 * a.duration; };
+    if (a.readyState >= 1) go(); else { a.preload = "metadata"; a.addEventListener("loadedmetadata", go, { once: true }); a.load(); }
+  });
+  if ("mediaSession" in navigator) {
+    try {
+      navigator.mediaSession.setActionHandler("seekbackward", () => skipAudio(-SKIP));
+      navigator.mediaSession.setActionHandler("seekforward", () => skipAudio(SKIP));
+    } catch (e) {}
+  }
 }
 
 /* ===== 動画 ===== */
@@ -13189,8 +13244,9 @@ document.addEventListener("click", e => {
   }
   if ((b = t.closest(".toev"))) { showEvidence(Number(b.dataset.q), true); return; }
   if ((b = t.closest(".opt"))) { if (!b.disabled) answerR(Number(b.dataset.q), Number(b.dataset.j), true); return; }
+  if ((b = t.closest(".pl-skip"))) { skipAudio(Number(b.dataset.skip)); return; }
   if ((b = t.closest(".rate button"))) {
-    $("aud").playbackRate = Number(b.dataset.r);
+    $("aud").playbackRate = $("aud").defaultPlaybackRate = Number(b.dataset.r);
     document.querySelectorAll(".rate button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
     return;
   }
